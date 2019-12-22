@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03f3ab3d-ce4d-412b-a4b3-621cfeb080ae" name="Default Changelist" comment="flink study init">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flinkStudyDemo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="03f3ab3d-ce4d-412b-a4b3-621cfeb080ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/demo/FlinkJavaDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/kafka/FlinkSinkToKafka.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/kafka/KafkaSourceToFlink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/mysql/FlinkSinkToMysql.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/pojo/QuestionKnowledeg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/utils/CountAgg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/kafka.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/kafka/FlinkSinkToKafka.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/kafka/KafkaSourceToFlink.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/utils/Utils.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -57,6 +61,12 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.yanli.flink.utils" />
+      <recent name="com.yanli.flink.demo" />
+    </key>
+  </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -80,26 +90,47 @@
       <option name="presentableId" value="Default" />
       <updated>1576998004925</updated>
       <workItem from="1576998014725" duration="658000" />
-      <workItem from="1576998727108" duration="627000" />
+      <workItem from="1576998727108" duration="962000" />
+      <workItem from="1577001361446" duration="1277000" />
     </task>
+    <task id="LOCAL-00001" summary="flink project init">
+      <created>1576999566299</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576999566299</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="flink project init" />
+    <option name="LAST_COMMIT_MESSAGE" value="flink project init" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1576998173070">
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1577002040484">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1576998173070" />
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1577002040484" />
+    <state x="462" y="222" width="441" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1577002620740">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="222" width="441" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1577002620740" />
+    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1577002703831">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1577002703831" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1576998855937">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1576998855937" />
-    <state x="535" y="254" key="Github.ShareDialog" timestamp="1576999026012">
+    <state x="535" y="254" key="Github.ShareDialog" timestamp="1576999605465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="535" y="254" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1576999026012" />
+    <state x="535" y="254" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1576999605465" />
     <state x="468" y="67" key="Github.UntrackedFilesDialog" timestamp="1576998937809">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -108,10 +139,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1576999358062" />
-    <state x="363" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1576998727401">
+    <state x="363" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1577001361531">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="363" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1576998727401" />
+    <state x="363" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1577001361531" />
     <state x="57" y="59" key="new project wizard" timestamp="1576999325076">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
