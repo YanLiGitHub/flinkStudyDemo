@@ -1,4 +1,4 @@
-package com.yanli.flink.utils;
+package com.yanli.flink.myDefindFunctions;
 
 
 import com.yanli.flink.pojo.QuestionKnowledeg;
