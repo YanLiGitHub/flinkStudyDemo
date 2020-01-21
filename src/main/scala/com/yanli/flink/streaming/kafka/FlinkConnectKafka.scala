@@ -2,7 +2,7 @@ package com.yanli.flink.streaming.kafka
 
 
 
-import com.yanli.flink.streaming.kafka.config.KafkaConfig
+import com.yanli.flink.config.KafkaConfig
 import org.apache.flink.api.common.serialization.SimpleStringSchema
 import org.apache.flink.streaming.api.scala.{DataStream, StreamExecutionEnvironment}
 import org.apache.flink.streaming.connectors.kafka.{FlinkKafkaConsumer, FlinkKafkaProducer, KafkaSerializationSchema}

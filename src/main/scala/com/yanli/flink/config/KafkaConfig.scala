@@ -1,4 +1,4 @@
-package com.yanli.flink.streaming.kafka.config
+package com.yanli.flink.config
 
 import java.io.FileInputStream
 import java.util.Properties
