@@ -2,11 +2,15 @@ package com.yanli.flink.streaming.kafka
 
 
 
+import java.lang
+import java.nio.charset.StandardCharsets
+
 import com.yanli.flink.config.KafkaConfig
 import org.apache.flink.api.common.serialization.SimpleStringSchema
 import org.apache.flink.streaming.api.scala.{DataStream, StreamExecutionEnvironment}
 import org.apache.flink.streaming.connectors.kafka.{FlinkKafkaConsumer, FlinkKafkaProducer, KafkaSerializationSchema}
 import org.apache.flink.api.scala._
+import org.apache.kafka.clients.producer.ProducerRecord
 
 
 /**
@@ -27,8 +31,12 @@ object FlinkConnectKafka {
   def getKafkaSink(dataStream :DataStream[String],topic :String): Unit ={
     val flinkProducer: FlinkKafkaProducer[String] = new FlinkKafkaProducer[String](
       topic,
-      new SimpleStringSchema(),
-      KafkaConfig.getKafkaProducerConfig()
+      //新的api需要用KafkaSerializationSchema ,跟SimpleStringSchema 同样的实现
+      new KafkaSerializationSchema[String] {
+        override def serialize(element: String, timestamp: lang.Long): ProducerRecord[Array[Byte], Array[Byte]] = new ProducerRecord[Array[Byte], Array[Byte]](topic,element.getBytes(StandardCharsets.UTF_8))
+      },
+      KafkaConfig.getKafkaProducerConfig(),
+      FlinkKafkaProducer.Semantic.EXACTLY_ONCE
     )
 
     flinkProducer.setWriteTimestampToKafka(true)

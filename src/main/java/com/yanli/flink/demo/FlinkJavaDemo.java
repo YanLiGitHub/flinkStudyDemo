@@ -1,5 +1,7 @@
 package com.yanli.flink.demo;
 
+import com.alibaba.fastjson.JSONObject;
+
 /**
  * @author yanli
  * @version 1.0
