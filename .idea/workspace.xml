@@ -1,18 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="03f3ab3d-ce4d-412b-a4b3-621cfeb080ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/demo/FlinkJavaDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/kafka/FlinkSinkToKafka.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/kafka/KafkaSourceToFlink.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/mysql/FlinkSinkToMysql.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/pojo/QuestionKnowledeg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/utils/CountAgg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/kafka.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/kafka/FlinkSinkToKafka.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/kafka/KafkaSourceToFlink.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/utils/Utils.scala" afterDir="false" />
+    <list default="true" id="03f3ab3d-ce4d-412b-a4b3-621cfeb080ae" name="Default Changelist" comment="新增 flink table/streaming api 连接hbase">
+      <change afterPath="$PROJECT_DIR$/.idea/flinkStudyDemo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flinkStudyDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flinkStudyDemo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/demo/FlinkJavaDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/demo/FlinkJavaDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/myDefindFunctions/CountAgg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/myDefindFunctions/CountAgg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/mysql/FlinkSinkToMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/mysql/FlinkSinkToMysql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/pojo/QuestionKnowledeg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/pojo/QuestionKnowledeg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/streaming/utils/JsonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/streaming/utils/JsonUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hbase.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hbase.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/kafka.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/kafka.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mysql.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/config/HBaseConfig.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/config/HBaseConfig.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/config/KafkaConfig.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/config/KafkaConfig.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/config/MysqlConfig.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/config/MysqlConfig.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/demo/ApplicationDemo.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/demo/ApplicationDemo.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/hbase/HbaseReader.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/hbase/HbaseReader.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/hbase/HbaseWriter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/hbase/HbaseWriter.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/kafka/FlinkConnectKafka.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/kafka/FlinkConnectKafka.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/mysql/FlinkConnectMysql.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/mysql/FlinkConnectMysql.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/mysql/FlinkJDBCFormat.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/mysql/FlinkJDBCFormat.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/utils/JsonUtils.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/utils/JsonUtils.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/table/kafka/FlinkTableToKafka.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/table/kafka/FlinkTableToKafka.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/table/mysql/FlinkTableConnectMysql.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/table/mysql/FlinkTableConnectMysql.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/table/mysql/FlinkTableJDBCMysql.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/table/mysql/FlinkTableJDBCMysql.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +69,17 @@
       </set>
     </option>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$MAVEN_REPOSITORY$" />
+        <option name="userSettingsFile" value="$USER_HOME$/.m2/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="vmOptions" value="-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
@@ -47,25 +87,109 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.yanli.flink.utils" />
-      <recent name="com.yanli.flink.demo" />
+      <recent name="com.yanli.flink" />
+      <recent name="com.yanli.flink.streaming" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.KafkaConfig">
+    <configuration name="ApplicationDemo" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.yanli.flink.demo.ApplicationDemo" />
+      <module name="flinkStudyDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yanli.flink.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlinkJavaDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yanli.flink.demo.FlinkJavaDemo" />
+      <module name="flinkStudyDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yanli.flink.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlinkTableToKafka" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.yanli.flink.table.kafka.FlinkTableToKafka" />
+      <module name="flinkStudyDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yanli.flink.table.kafka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KafkaConfig" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.yanli.flink.config.KafkaConfig" />
+      <module name="flinkStudyDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yanli.flink.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MysqlConfig" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.yanli.flink.config.MysqlConfig" />
+      <module name="flinkStudyDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yanli.flink.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.KafkaConfig" />
+        <item itemvalue="Application.ApplicationDemo" />
+        <item itemvalue="Application.FlinkJavaDemo" />
+        <item itemvalue="Application.MysqlConfig" />
+        <item itemvalue="Application.FlinkTableToKafka" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -79,6 +203,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -90,62 +215,79 @@
       <option name="presentableId" value="Default" />
       <updated>1576998004925</updated>
       <workItem from="1576998014725" duration="658000" />
-      <workItem from="1576998727108" duration="962000" />
-      <workItem from="1577001361446" duration="1277000" />
+      <workItem from="1576998727108" duration="627000" />
+      <workItem from="1577008865796" duration="304000" />
+      <workItem from="1577106002029" duration="1596000" />
+      <workItem from="1578998135636" duration="24050000" />
+      <workItem from="1579351544007" duration="3863000" />
+      <workItem from="1579400314778" duration="13638000" />
+      <workItem from="1581388629795" duration="324000" />
+      <workItem from="1581429361627" duration="347000" />
+      <workItem from="1581474763335" duration="1068000" />
+      <workItem from="1582009442585" duration="21000" />
+      <workItem from="1582784747466" duration="44000" />
+      <workItem from="1590922529227" duration="1182000" />
+      <workItem from="1590935886294" duration="119000" />
+      <workItem from="1590977378458" duration="83000" />
+      <workItem from="1591596548939" duration="17489000" />
+      <workItem from="1613964895450" duration="671000" />
+      <workItem from="1613972793887" duration="353000" />
     </task>
-    <task id="LOCAL-00001" summary="flink project init">
-      <created>1576999566299</created>
+    <task id="LOCAL-00001" summary="flink 版本调整为 1.9.1">
+      <created>1577439210778</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1576999566299</updated>
+      <updated>1577439210778</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="添加flink connect kafka 的Scala代码">
+      <created>1579356356366</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579356356366</updated>
+    </task>
+    <task id="LOCAL-00003" summary="新增 flink table/streaming api 连接kafka和mysql">
+      <created>1579594223986</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579594223987</updated>
+    </task>
+    <task id="LOCAL-00004" summary="新增 flink table/streaming api 连接hbase">
+      <created>1591615953757</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591615953757</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="flink project init" />
-    <option name="LAST_COMMIT_MESSAGE" value="flink project init" />
+    <MESSAGE value="flink 版本调整为 1.9.1" />
+    <MESSAGE value="添加flink connect kafka 的Scala代码" />
+    <MESSAGE value="新增 flink table/streaming api 连接kafka和mysql" />
+    <MESSAGE value="新增 flink table/streaming api 连接hbase" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增 flink table/streaming api 连接hbase" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1577002040484">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1577002040484" />
-    <state x="462" y="222" width="441" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1577002620740">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="462" y="222" width="441" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1577002620740" />
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1577002703831">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1577002703831" />
-    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1576998855937">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1576998855937" />
-    <state x="535" y="254" key="Github.ShareDialog" timestamp="1576999605465">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="535" y="254" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1576999605465" />
-    <state x="468" y="67" key="Github.UntrackedFilesDialog" timestamp="1576998937809">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="468" y="67" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1576998937809" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1576999358062">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1576999358062" />
-    <state x="363" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1577001361531">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="363" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1577001361531" />
-    <state x="57" y="59" key="new project wizard" timestamp="1576999325076">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="57" y="59" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1576999325076" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
