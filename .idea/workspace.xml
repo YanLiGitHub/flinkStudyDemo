@@ -4,44 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03f3ab3d-ce4d-412b-a4b3-621cfeb080ae" name="Default Changelist" comment="新增 flink table/streaming api 连接hbase">
-      <change afterPath="$PROJECT_DIR$/.idea/flinkStudyDemo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="03f3ab3d-ce4d-412b-a4b3-621cfeb080ae" name="Default Changelist" comment="新增 flink table/streaming java 代码">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/config/HBaseConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/config/KafkaConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/config/MysqlConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/pojo/hbase/ZKWisdomAnswerDetial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/pojo/kafka/BehaviorEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi/hbase/HbaseReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi/hbase/HbaseWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi/kafka/FlinkConnectKafka.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi/mysql/FlinkConnectMysql.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi/mysql/FlinkJDBCFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flinkStudyDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flinkStudyDemo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/demo/FlinkJavaDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/demo/FlinkJavaDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/myDefindFunctions/CountAgg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/myDefindFunctions/CountAgg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/mysql/FlinkSinkToMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/mysql/FlinkSinkToMysql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/pojo/QuestionKnowledeg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/pojo/QuestionKnowledeg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/streaming/utils/JsonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/streaming/utils/JsonUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hbase.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hbase.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/kafka.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/kafka.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mysql.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/config/HBaseConfig.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/config/HBaseConfig.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/config/KafkaConfig.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/config/KafkaConfig.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/config/MysqlConfig.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/config/MysqlConfig.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/demo/ApplicationDemo.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/demo/ApplicationDemo.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/hbase/HbaseReader.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/hbase/HbaseReader.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/hbase/HbaseWriter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/hbase/HbaseWriter.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/kafka/FlinkConnectKafka.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/kafka/FlinkConnectKafka.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/mysql/FlinkConnectMysql.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/mysql/FlinkConnectMysql.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/mysql/FlinkJDBCFormat.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/mysql/FlinkJDBCFormat.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/utils/JsonUtils.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/utils/JsonUtils.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/table/kafka/FlinkTableToKafka.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/table/kafka/FlinkTableToKafka.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/table/mysql/FlinkTableConnectMysql.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/table/mysql/FlinkTableConnectMysql.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/table/mysql/FlinkTableJDBCMysql.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/table/mysql/FlinkTableJDBCMysql.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/demo/FlinkJavaDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/demo/FlinkJavaDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/myDefindFunctions/CountAgg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/myDefindFunctions/CountAgg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/mysql/FlinkSinkToMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/mysql/FlinkSinkToMysql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/pojo/QuestionKnowledeg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/pojo/QuestionKnowledeg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/streaming/utils/JsonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/utils/JavaJsonUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/config/HBaseConfig.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/scala/config/HBaseConfig.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/config/KafkaConfig.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/scala/config/KafkaConfig.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/config/MysqlConfig.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/scala/config/MysqlConfig.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/demo/ApplicationDemo.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/scala/demo/ApplicationDemo.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/hbase/HbaseReader.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/scala/streaming/hbase/HbaseReader.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/hbase/HbaseWriter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/scala/streaming/hbase/HbaseWriter.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/kafka/FlinkConnectKafka.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/scala/streaming/kafka/FlinkConnectKafka.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/mysql/FlinkConnectMysql.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/scala/streaming/mysql/FlinkConnectMysql.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/mysql/FlinkJDBCFormat.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/scala/streaming/mysql/FlinkJDBCFormat.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/streaming/utils/JsonUtils.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/scala/utils/JsonUtils.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/table/kafka/FlinkTableToKafka.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/scala/table/kafka/FlinkTableToKafka.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/table/mysql/FlinkTableConnectMysql.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/scala/table/mysql/FlinkTableConnectMysql.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/table/mysql/FlinkTableJDBCMysql.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/scala/table/mysql/FlinkTableJDBCMysql.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +89,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -104,15 +98,20 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/pojo" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/yanli/flink" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.yanli.flink.java" />
       <recent name="com.yanli.flink" />
       <recent name="com.yanli.flink.streaming" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.KafkaConfig">
@@ -181,6 +180,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.KafkaConfig" />
@@ -231,7 +243,13 @@
       <workItem from="1590977378458" duration="83000" />
       <workItem from="1591596548939" duration="17489000" />
       <workItem from="1613964895450" duration="671000" />
-      <workItem from="1613972793887" duration="353000" />
+      <workItem from="1613972793887" duration="1482000" />
+      <workItem from="1613974787660" duration="386000" />
+      <workItem from="1613976613176" duration="273000" />
+      <workItem from="1613976903650" duration="142000" />
+      <workItem from="1614148482020" duration="300000" />
+      <workItem from="1614157911371" duration="37000" />
+      <workItem from="1614838973273" duration="1291000" />
     </task>
     <task id="LOCAL-00001" summary="flink 版本调整为 1.9.1">
       <created>1577439210778</created>
@@ -261,7 +279,21 @@
       <option name="project" value="LOCAL" />
       <updated>1591615953757</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="新增 flink table/streaming api 连接hbase">
+      <created>1613973341129</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613973341129</updated>
+    </task>
+    <task id="LOCAL-00006" summary="新增 flink table/streaming api 连接hbase">
+      <created>1613973384087</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1613973384087</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +316,8 @@
     <MESSAGE value="添加flink connect kafka 的Scala代码" />
     <MESSAGE value="新增 flink table/streaming api 连接kafka和mysql" />
     <MESSAGE value="新增 flink table/streaming api 连接hbase" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增 flink table/streaming api 连接hbase" />
+    <MESSAGE value="新增 flink table/streaming java 代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增 flink table/streaming java 代码" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
