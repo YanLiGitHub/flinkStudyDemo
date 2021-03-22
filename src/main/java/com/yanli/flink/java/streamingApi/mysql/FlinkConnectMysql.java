@@ -21,6 +21,7 @@ import java.util.List;
  * @ClassName: FlinkConnectMysql
  * @date 2021/2/24 5:12 下午
  */
+@Deprecated
 public class FlinkConnectMysql {
     private static final Logger logger = LoggerFactory.getLogger(FlinkConnectMysql.class);
 

@@ -14,6 +14,7 @@ import java.util.Properties;
  * @ClassName: FlinkJDBCFormat
  * @date 2021/2/24 5:13 下午
  */
+@Deprecated
 public class FlinkJDBCFormat {
     private static Properties properties  = MysqlConfig.getMysqlConfig();
 
