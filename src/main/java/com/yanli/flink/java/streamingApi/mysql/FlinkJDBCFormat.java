@@ -6,7 +6,6 @@ import org.apache.flink.api.java.io.jdbc.JDBCInputFormat.JDBCInputFormatBuilder;
 import org.apache.flink.api.java.io.jdbc.JDBCOutputFormat;
 import org.apache.flink.api.java.io.jdbc.JDBCOutputFormat.JDBCOutputFormatBuilder;
 
-import java.util.Properties;
 
 /**
  * @author YanLi
@@ -16,7 +15,7 @@ import java.util.Properties;
  */
 @Deprecated
 public class FlinkJDBCFormat {
-    private static Properties properties  = MysqlConfig.getMysqlConfig();
+
 
     /**
      * 功能描述:
@@ -28,10 +27,10 @@ public class FlinkJDBCFormat {
      */
     public static JDBCInputFormatBuilder getJDBCInputFormat(){
         JDBCInputFormatBuilder inputFormatBuilder = JDBCInputFormat.buildJDBCInputFormat()
-                .setDrivername(properties.getProperty("driverClass"))
-                .setDBUrl(properties.getProperty("dbUrl"))
-                .setUsername(properties.getProperty("userNmae"))
-                .setPassword(properties.getProperty("passWord"));
+                .setDrivername(MysqlConfig.DRIVER_CLASS)
+                .setDBUrl(MysqlConfig.DB_URL)
+                .setUsername(MysqlConfig.USER_NAME)
+                .setPassword(MysqlConfig.PASSWORD);
 
         return inputFormatBuilder;
     }
@@ -46,10 +45,10 @@ public class FlinkJDBCFormat {
      */
     public static JDBCOutputFormatBuilder getJDBCOutputFormat(){
         JDBCOutputFormatBuilder outputFormatBuilder = JDBCOutputFormat.buildJDBCOutputFormat()
-                .setDrivername(properties.getProperty("driverClass"))
-                .setDBUrl(properties.getProperty("dbUrl"))
-                .setUsername(properties.getProperty("userNmae"))
-                .setPassword(properties.getProperty("passWord"));
+                .setDrivername(MysqlConfig.DRIVER_CLASS)
+                .setDBUrl(MysqlConfig.DB_URL)
+                .setUsername(MysqlConfig.USER_NAME)
+                .setPassword(MysqlConfig.PASSWORD);
 
         return outputFormatBuilder;
     }

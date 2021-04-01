@@ -3,6 +3,7 @@ package com.yanli.flink.java.demo;
 import com.alibaba.fastjson.JSONObject;
 import com.yanli.flink.java.config.HBaseConfig;
 import com.yanli.flink.java.pojo.kafka.BehaviorEvent;
+import com.yanli.flink.java.pojo.mysql.TulingLectureLabel;
 import com.yanli.flink.java.streamingApi.kafka.FlinkConnectKafka;
 import com.yanli.flink.java.streamingApi.mysql.SampleAsyncDatabase;
 import com.yanli.flink.java.utils.JavaJsonUtil;
@@ -15,6 +16,7 @@ import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.async.RichAsyncFunction;
 import org.apache.flink.util.Collector;
+import org.codehaus.janino.Java;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -102,6 +104,7 @@ public class FlinkJavaDemo {
                 }
             }
         });
-        AsyncDataStream.unorderedWait(kafkaSource,new SampleAsyncDatabase(),1000L,TimeUnit.MILLISECONDS,100);
+        SingleOutputStreamOperator<TulingLectureLabel> tulingLectureLabelSingleOutputStreamOperator = kafkaSource.map(str -> JavaJsonUtil.getObject(str, TulingLectureLabel.class));
+        AsyncDataStream.unorderedWait(tulingLectureLabelSingleOutputStreamOperator,new SampleAsyncDatabase(),1000L,TimeUnit.MILLISECONDS,100);
     }
 }
