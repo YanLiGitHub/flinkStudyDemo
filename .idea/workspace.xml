@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03f3ab3d-ce4d-412b-a4b3-621cfeb080ae" name="Default Changelist" comment="新增 flink table/streaming java 代码">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/pojo/mysql/TulingLectureLabel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/pojo/hdfs/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi/elasticsearch/FlinkConnectElasticSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi/hdfs/FlinkConnectHDFS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi/hdfs/orc/PersonVectorizer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/config/MysqlConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/config/MysqlConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/demo/FlinkJavaDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/demo/FlinkJavaDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/pojo/QuestionKnowledeg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/pojo/QuestionKnowledeg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi/mysql/FlinkJDBCFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi/mysql/FlinkJDBCFormat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi/mysql/FlinkJDBCSink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi/mysql/FlinkJDBCSink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi/mysql/SampleAsyncDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yanli/flink/java/streamingApi/mysql/SampleAsyncDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/scala/table/kafka/FlinkTableToKafka.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/yanli/flink/scala/table/kafka/FlinkTableToKafka.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +165,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.KafkaConfig" />
@@ -230,7 +241,9 @@
       <workItem from="1616744417894" duration="1125000" />
       <workItem from="1616749320029" duration="3939000" />
       <workItem from="1617262784566" duration="5459000" />
-      <workItem from="1617271160984" duration="3557000" />
+      <workItem from="1617271160984" duration="4320000" />
+      <workItem from="1618386959949" duration="10108000" />
+      <workItem from="1618401117312" duration="11404000" />
     </task>
     <task id="LOCAL-00001" summary="flink 版本调整为 1.9.1">
       <created>1577439210778</created>
@@ -288,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616413275902</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary=" flink Java api 实现mysql异步I/O，实现mysqlSink">
+      <created>1617277042709</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1617277042709</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +332,9 @@
     <MESSAGE value="新增 flink table/streaming api 连接kafka和mysql" />
     <MESSAGE value="新增 flink table/streaming api 连接hbase" />
     <MESSAGE value="新增 flink table/streaming java 代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增 flink table/streaming java 代码" />
+    <MESSAGE value=" flink Java api 实现mysql异步I/O，实现mysqlSink" />
+    <MESSAGE value="flink 增加 es、filesink实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="flink 增加 es、filesink实现" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

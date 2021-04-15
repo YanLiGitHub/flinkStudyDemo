@@ -21,9 +21,18 @@
 
 2、修改了new FlinkKafkaProducer（）kafka生产者的创建api，新的api需要用KafkaSerializationSchema，实现接口里的serialize 方法即可。参考了SimpleStringSchema 的实现。
 
-2021-04-01
+2021-04-01:
 flink 升级了1.11.1版本
 
 1、Java api 实现 异步I/O访问 MySQL 数据库
 
 2、通过 新的JDBC connect 实现 MySQL sink.
+
+2021-04-15:
+
+flink v1.11.1版本
+
+1、Java api 增加 es 连接器实现。自定义失败请求处理方式。
+
+2、Java api 增加 StreamingFileSink 实现。自定义分桶规则、自定义滚动策略、ORC文件批量写
+flink V1.12版本之后，使用FileSink 实现数据写出到文件系统。
