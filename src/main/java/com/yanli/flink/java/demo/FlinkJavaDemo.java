@@ -10,6 +10,8 @@ import com.yanli.flink.java.streamingApi.mysql.SampleAsyncDatabase;
 import com.yanli.flink.java.utils.JavaJsonUtil;
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.api.java.utils.ParameterTool;
+import org.apache.flink.contrib.streaming.state.RocksDBStateBackend;
+import org.apache.flink.runtime.state.filesystem.FsStateBackend;
 import org.apache.flink.streaming.api.CheckpointingMode;
 import org.apache.flink.streaming.api.datastream.AsyncDataStream;
 import org.apache.flink.streaming.api.datastream.DataStream;
@@ -48,6 +50,8 @@ public class FlinkJavaDemo {
 
         StreamExecutionEnvironment environment = StreamExecutionEnvironment.getExecutionEnvironment();
         environment.setParallelism(parallelism);
+        //设置state存储路径
+        environment.setStateBackend(new FsStateBackend("hdfs:///checkpoints-data/"));
         environment.enableCheckpointing(5000, CheckpointingMode.EXACTLY_ONCE);
         DataStream<String> kafkaSource = FlinkConnectKafka.getKafkaSource(environment, kafkaTopic, bootstrapServers);
 
