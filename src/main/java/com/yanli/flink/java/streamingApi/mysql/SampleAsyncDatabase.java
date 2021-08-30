@@ -1,13 +1,10 @@
 package com.yanli.flink.java.streamingApi.mysql;
 
-import com.alibaba.fastjson.JSONObject;
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.yanli.flink.java.config.MysqlConfig;
 import com.yanli.flink.java.pojo.mysql.TulingLectureLabel;
 import com.yanli.flink.java.utils.JavaJsonUtil;
-import io.vertx.core.AsyncResult;
-import io.vertx.core.Handler;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.async.ResultFuture;
 import org.apache.flink.streaming.api.functions.async.RichAsyncFunction;

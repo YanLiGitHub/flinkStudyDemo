@@ -1,5 +1,6 @@
 package com.yanli.flink.java.config;
 
+import com.yanli.flink.java.utils.PropertiesUtil;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.HConstants;
@@ -20,13 +21,7 @@ public class HBaseConfig {
     public static final String COLUMN_NAME_LIST = "columnNameList";
 
     public static Configuration getHBaseConfig(String zookeeperQuorum){
-        Properties properties = new Properties();
-        InputStream resourceAsStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("hbase.properties");
-        try {
-            properties.load(resourceAsStream);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Properties properties = PropertiesUtil.getProperties("hbase.properties");
 
         Configuration configuration = HBaseConfiguration.create();
         configuration.set(HConstants.ZOOKEEPER_QUORUM, zookeeperQuorum);

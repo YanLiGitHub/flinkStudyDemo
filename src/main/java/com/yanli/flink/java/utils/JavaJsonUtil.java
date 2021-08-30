@@ -3,10 +3,14 @@ package com.yanli.flink.java.utils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.google.common.base.CaseFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @version 1.0
@@ -71,6 +75,26 @@ public class JavaJsonUtil {
         return JSONArray.parseArray(jsonStr, tClass);
     }
 
+    /**
+     * @Description: json转换字段结构，驼峰转下划线、下划线转驼峰等等
+     * @Param: jsonStr 要转换的json字符串
+     * @Param: sourceType 字段串中字段的数据格式
+     * @Param: distType 将要转换成的字段格式
+     * @return: java.lang.String
+     * @Create: 2021-08-10 13:24:16
+     */
+    public static String jsonTransferByGuava(String jsonStr, CaseFormat sourceType, CaseFormat distType) {
 
+        Map<String, String> map = JSON.parseObject(jsonStr, Map.class);
+        Map<String, Object> newMap = new HashMap<>();
+        Set<Map.Entry<String, String>> entries = map.entrySet();
+        for (Map.Entry<String, String> entry : entries) {
+            // key的转换
+            String newKey = sourceType.to(distType, entry.getKey());
+            // 将新key放进结果map中
+            newMap.put(newKey, entry.getValue());
+        }
+        return JSON.toJSONString(newMap);
+    }
 }
 

@@ -130,6 +130,11 @@
             <artifactId>vertx-jdbc-client</artifactId>
             <version>${vertx.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-redis-client</artifactId>
+            <version>${vertx.version}</version>
+        </dependency>
         <!-- 缓存依赖 -->
         <dependency>
             <groupId>com.github.ben-manes.caffeine</groupId>

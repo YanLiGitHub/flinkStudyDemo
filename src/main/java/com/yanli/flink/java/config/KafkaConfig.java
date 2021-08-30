@@ -1,5 +1,6 @@
 package com.yanli.flink.java.config;
 
+import com.yanli.flink.java.utils.PropertiesUtil;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
 
@@ -15,17 +16,10 @@ import java.util.Properties;
  *  获取kafka config
  */
 public class KafkaConfig {
-    private static String classPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
 
     private static Properties loadConfigFile(){
-        Properties properties = new Properties();
-        InputStream resourceAsStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("kafka.properties");
-        try {
-            properties.load(resourceAsStream);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return properties;
+        Properties loadConfigFile = PropertiesUtil.getProperties("kafka.properties");
+        return loadConfigFile;
     }
 
     /**
