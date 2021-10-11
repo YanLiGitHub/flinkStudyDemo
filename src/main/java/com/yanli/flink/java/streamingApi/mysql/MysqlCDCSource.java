@@ -16,6 +16,8 @@ import org.apache.kafka.connect.source.SourceRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Properties;
+
 /**
  * @author YanLi
  * @version 1.0
@@ -27,6 +29,12 @@ public class MysqlCDCSource {
 
 
     public static DataStream<String> getMysqlSource(StreamExecutionEnvironment environment) {
+
+//        Properties debeziumProperties = new Properties();
+//        不获取所有表的ddl,权限小时可以使用该方案
+//        debeziumProperties.setProperty("database.history.store.only.monitored.tables.ddl",String.valueOf(true));
+//        debeziumProperties.setProperty("database.history.store.only.captured.tables.ddl",String.valueOf(true));
+
         SourceFunction<String> mysqlBuilder = MySQLSource.<String>builder()
                 .hostname(MysqlConfig.CDC_HOST)
                 .port(MysqlConfig.CDC_PORT)
@@ -34,6 +42,8 @@ public class MysqlCDCSource {
                 .tableList(MysqlConfig.CDC_TABLE_NAME)
                 .username(MysqlConfig.CDC_USER_NAME)
                 .password(MysqlConfig.CDC_PASSWORD)
+                //配置debezium 连接mysql参数
+//                .debeziumProperties(debeziumProperties)
                 .deserializer(new JSONObjectDebeziumDeserialization())
                 .build();
         return environment.addSource(mysqlBuilder);
