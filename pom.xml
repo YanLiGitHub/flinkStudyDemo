@@ -10,7 +10,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <flink.version>1.11.1</flink.version>
+        <flink.version>1.11.3</flink.version>
         <java.version>1.8</java.version>
         <vertx.version>4.1.2</vertx.version>
         <scala.version>2.12.8</scala.version>
