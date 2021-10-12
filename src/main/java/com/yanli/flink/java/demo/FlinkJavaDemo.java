@@ -9,7 +9,11 @@ import com.yanli.flink.java.streamingApi.kafka.FlinkConnectKafka;
 import com.yanli.flink.java.streamingApi.mysql.SampleAsyncDatabase;
 import com.yanli.flink.java.utils.JavaJsonUtil;
 import org.apache.flink.api.common.functions.FlatMapFunction;
+import org.apache.flink.api.common.state.ValueState;
+import org.apache.flink.api.common.state.ValueStateDescriptor;
+import org.apache.flink.api.java.functions.KeySelector;
 import org.apache.flink.api.java.utils.ParameterTool;
+import org.apache.flink.configuration.Configuration;
 import org.apache.flink.contrib.streaming.state.RocksDBStateBackend;
 import org.apache.flink.runtime.state.filesystem.FsStateBackend;
 import org.apache.flink.streaming.api.CheckpointingMode;
@@ -17,7 +21,9 @@ import org.apache.flink.streaming.api.datastream.AsyncDataStream;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
+import org.apache.flink.streaming.api.functions.KeyedProcessFunction;
 import org.apache.flink.streaming.api.functions.async.RichAsyncFunction;
+import org.apache.flink.streaming.api.functions.sink.PrintSinkFunction;
 import org.apache.flink.util.Collector;
 import org.codehaus.janino.Java;
 import org.slf4j.Logger;
@@ -113,5 +119,32 @@ public class FlinkJavaDemo {
         AsyncDataStream.unorderedWait(tulingLectureLabelSingleOutputStreamOperator,new SampleAsyncDatabase(),1000L,TimeUnit.MILLISECONDS,100);
 
         streamOperator.addSink(FlinkConnectElasticSearch.addSink(new ArrayList<>(),1));
+
+        streamOperator.keyBy(new KeySelector<Map<String, String>, String>() {
+            @Override
+            public String getKey(Map<String, String> value) throws Exception {
+                for (String mapKey : value.keySet()){
+                    return mapKey;
+                }
+                return null;
+            }
+        }).process(new KeyedProcessFunction<String, Map<String, String>, Integer>() {
+            private ValueState<Integer> sumState;
+            @Override
+            public void open(Configuration parameters) throws Exception {
+                super.open(parameters);
+                ValueStateDescriptor<Integer> stateDescriptor = new ValueStateDescriptor("sum", Integer.TYPE);
+                sumState = getRuntimeContext().getState(stateDescriptor);
+            }
+
+            @Override
+            public void processElement(Map<String, String> value, Context ctx, Collector<Integer> out) throws Exception {
+                Integer oldSum = sumState.value();
+                int newSum = oldSum == null ? 0 : oldSum;
+                newSum += 1;
+                sumState.update(newSum);
+                out.collect(newSum);
+            }
+        }).print();
     }
 }
